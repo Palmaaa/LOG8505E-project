@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="capability" version="12.0.0.2017041100">
+  <ownedViewpoints name="capabilities" modelFileExtension="">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="System Capability" domainClass="capability::CapabilityDiagram" enablePopupBars="true">
+      <metamodel href="http://www.example.org/capability#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Capability" semanticCandidatesExpression="feature:supports" domainClass="capability::Capability">
+          <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Actor" semanticCandidatesExpression="feature:supports" domainClass="capability::Actor">
+          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="10" workspacePath="/system.capability.design/icons/stickman.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Entity" semanticCandidatesExpression="feature:supports" domainClass="capability::Entity">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ActorEntityCapabilityRelation" sourceMapping="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Actor'] //@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Entity']" targetMapping="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Capability']" targetFinderExpression="feature:isInvolvedIn">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CapabilityIncludesRelation" sourceMapping="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Capability']" targetMapping="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Capability']" targetFinderExpression="feature:includes">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="&lt;&lt;i>>">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CapabilityExtendsRelation" sourceMapping="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Capability']" targetMapping="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Capability']" targetFinderExpression="feature:extends">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="&lt;&lt;e>>">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="SpecializableElementRelation" sourceMapping="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Actor'] //@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Entity'] //@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Capability']" targetMapping="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Actor'] //@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Entity'] //@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Capability']" targetFinderExpression="feature:specializes">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="system.capability.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

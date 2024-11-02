@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated capability -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="system.capability.presentation.CapabilityModelWizardID"
+            name="%_UI_CapabilityModelWizard_label"
+            class="system.capability.presentation.CapabilityModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CapabilityModelFile.gif">
+         <description>%_UI_CapabilityModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated capability -->
+      <editor
+            id="system.capability.presentation.CapabilityEditorID"
+            name="%_UI_CapabilityEditor_label"
+            icon="icons/full/obj16/CapabilityModelFile.gif"
+            extensions="capability"
+            class="system.capability.presentation.CapabilityEditor"
+            contributorClass="system.capability.presentation.CapabilityActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

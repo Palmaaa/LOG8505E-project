@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="capability" nsURI="http://www.example.org/capability" nsPrefix="capability">
+  <eClassifiers xsi:type="ecore:EClass" name="Capability" eSuperTypes="#//SpecializableElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" eType="#//Capability"
+        eOpposite="#//Capability/isIncludedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isIncludedIn" eType="#//Capability"
+        eOpposite="#//Capability/includes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extends" eType="#//Capability"
+        eOpposite="#//Capability/isExtendedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isExtendedBy" eType="#//Capability"
+        eOpposite="#//Capability/extends"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="involves" lowerBound="1"
+        upperBound="-1" eType="#//InvolvableElement" eOpposite="#//InvolvableElement/isInvolvedIn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecializableElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specializes" eType="#//SpecializableElement"
+        eOpposite="#//SpecializableElement/isSpecializedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isSpecializedBy" eType="#//SpecializableElement"
+        eOpposite="#//SpecializableElement/specializes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InvolvableElement" abstract="true" eSuperTypes="#//SpecializableElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="isInvolvedIn" lowerBound="1"
+        upperBound="-1" eType="#//Capability" eOpposite="#//Capability/involves"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//InvolvableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//InvolvableElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityDiagram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supports" upperBound="-1"
+        eType="#//SpecializableElement" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>
