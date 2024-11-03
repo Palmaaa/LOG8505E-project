@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <capability:CapabilityDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:capability="http://www.example.org/capability">
-  <supports xsi:type="capability:Capability" name="C2" includes="//@supports.1" involves="//@supports.3"/>
-  <supports xsi:type="capability:Capability" name="C1" isIncludedIn="//@supports.0" isExtendedBy="//@supports.4" involves="//@supports.2"/>
-  <supports xsi:type="capability:Actor" name="User" specializes="//@supports.5" isInvolvedIn="//@supports.1"/>
-  <supports xsi:type="capability:Entity" name="Entity 1" isInvolvedIn="//@supports.0 //@supports.4"/>
-  <supports xsi:type="capability:Capability" name="C3" extends="//@supports.1" involves="//@supports.3"/>
-  <supports xsi:type="capability:Actor" name="User 2" isSpecializedBy="//@supports.2"/>
+  <supports xsi:type="capability:Actor" name="Actor 1" isSpecializedBy="//@supports.3" isInvolvedIn="//@supports.1 //@supports.2"/>
+  <supports xsi:type="capability:Capability" name="C1" isIncludedIn="//@supports.2" isExtendedBy="//@supports.4" involves="//@supports.0"/>
+  <supports xsi:type="capability:Capability" name="C2" includes="//@supports.1" involves="//@supports.0 //@supports.3 //@supports.6"/>
+  <supports xsi:type="capability:Actor" name="Actor 2" specializes="//@supports.0" isInvolvedIn="//@supports.2"/>
+  <supports xsi:type="capability:Capability" name="C3" extends="//@supports.1" involves="//@supports.5"/>
+  <supports xsi:type="capability:Entity" name="Entity 1" isInvolvedIn="//@supports.4"/>
+  <supports xsi:type="capability:Entity" name="Entity 2" isInvolvedIn="//@supports.2"/>
 </capability:CapabilityDiagram>

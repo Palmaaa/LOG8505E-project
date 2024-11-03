@@ -1,0 +1,10 @@
+*.class
+target/
+# Package Files #
+*.war
+*.ear
+*~
+*.xtendbin
+*._trace
+bin
+.repositoryMaven/
