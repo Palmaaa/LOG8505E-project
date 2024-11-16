@@ -2,12 +2,12 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="capability" nsURI="http://www.example.org/capability" nsPrefix="capability">
   <eClassifiers xsi:type="ecore:EClass" name="Capability" eSuperTypes="#//SpecializableElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" eType="#//Capability"
-        eOpposite="#//Capability/isIncludedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
+        eType="#//Capability" eOpposite="#//Capability/isIncludedIn"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isIncludedIn" eType="#//Capability"
         eOpposite="#//Capability/includes"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="extends" eType="#//Capability"
-        eOpposite="#//Capability/isExtendedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extends" upperBound="-1"
+        eType="#//Capability" eOpposite="#//Capability/isExtendedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="isExtendedBy" eType="#//Capability"
         eOpposite="#//Capability/extends"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="involves" lowerBound="1"

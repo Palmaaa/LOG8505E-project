@@ -5,7 +5,7 @@
     <semanticResources>capability.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_LwWBIIWBEe-kINPG_6QuPg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LxTDYIWBEe-kINPG_6QuPg" name="capability" repPath="#_LxIrUIWBEe-kINPG_6QuPg" changeId="1730584232151">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LxTDYIWBEe-kINPG_6QuPg" name="capability" repPath="#_LxIrUIWBEe-kINPG_6QuPg" changeId="1731715115991">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="capability.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -241,22 +241,57 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_JSDpoKOlEe-K0eKyf_GS0g" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" iconPath="/system.capability.edit/icons/full/obj16/Capability.gif" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='EClass']"/>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_JSGF4KOlEe-K0eKyf_GS0g" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" iconPath="/system.capability.edit/icons/full/obj16/SpecializableElement.gif" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
+          <borderColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='Dark%20EClass']"/>
+          <labelFormat>italic</labelFormat>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='Abstract%20EClass']"/>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_JSHUAKOlEe-K0eKyf_GS0g" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" iconPath="/system.capability.edit/icons/full/obj16/InvolvableElement.gif" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
+          <borderColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='Dark%20EClass']"/>
+          <labelFormat>italic</labelFormat>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='Abstract%20EClass']"/>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_JSH7EKOlEe-K0eKyf_GS0g" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" iconPath="/system.capability.edit/icons/full/obj16/Actor.gif" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='EClass']"/>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_JSJJMKOlEe-K0eKyf_GS0g" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" iconPath="/system.capability.edit/icons/full/obj16/Entity.gif" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='EClass']"/>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_JSJwQaOlEe-K0eKyf_GS0g" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" iconPath="/system.capability.edit/icons/full/obj16/CapabilityDiagram.gif" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='EClass']"/>
+        </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_M06cgIWBEe-kINPG_6QuPg" name="Capability" tooltipText="" outgoingEdges="_UMPPYIWBEe-kINPG_6QuPg _jVWuJoWCEe-kINPG_6QuPg _D1VnjIWDEe-kINPG_6QuPg _zaJfzJCsEe-j2o4rbghYyA" incomingEdges="_jVWuJoWCEe-kINPG_6QuPg _D1VnjIWDEe-kINPG_6QuPg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="capability.ecore#//Capability"/>
       <semanticElements xmi:type="ecore:EClass" href="capability.ecore#//Capability"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_CIHF0ZCpEe-r0IiHjqB4WQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
-      </ownedStyle>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_JSEQsaOlEe-K0eKyf_GS0g" iconPath="/system.capability.edit/icons/full/obj16/Capability.gif" description="_JSDpoKOlEe-K0eKyf_GS0g" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Oy7oYIWBEe-kINPG_6QuPg" name="SpecializableElement" tooltipText="" outgoingEdges="_1weh1plbEe-CYc4Y8fZptQ" incomingEdges="_UMPPYIWBEe-kINPG_6QuPg _YiT3xoWBEe-kINPG_6QuPg _RBOSpoWGEe-kINPG_6QuPg _1weh1plbEe-CYc4Y8fZptQ" width="12" height="10">
       <target xmi:type="ecore:EClass" href="capability.ecore#//SpecializableElement"/>
       <semanticElements xmi:type="ecore:EClass" href="capability.ecore#//SpecializableElement"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_htsdYZCyEe-zwaAPkgjuiA" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_JSGF4qOlEe-K0eKyf_GS0g" iconPath="/system.capability.edit/icons/full/obj16/SpecializableElement.gif" description="_JSGF4KOlEe-K0eKyf_GS0g" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
         <labelFormat>italic</labelFormat>
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_hAdj8JCyEe-zwaAPkgjuiA" name="name : EString" tooltipText="">
@@ -283,9 +318,8 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_U_3rwIWBEe-kINPG_6QuPg" name="InvolvableElement" tooltipText="" outgoingEdges="_YiT3xoWBEe-kINPG_6QuPg" incomingEdges="_dv5-DIWBEe-kINPG_6QuPg _eJp6xoWBEe-kINPG_6QuPg _zaJfzJCsEe-j2o4rbghYyA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="capability.ecore#//InvolvableElement"/>
       <semanticElements xmi:type="ecore:EClass" href="capability.ecore#//InvolvableElement"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_IC6aNYWOEe-kINPG_6QuPg" iconPath="/org.eclipse.emf.ecoretools.design/icons/full/obj16/EClass_abstract.gif" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_JSHUAqOlEe-K0eKyf_GS0g" iconPath="/system.capability.edit/icons/full/obj16/InvolvableElement.gif" description="_JSHUAKOlEe-K0eKyf_GS0g" borderSize="1" borderSizeComputationExpression="1" borderColor="125,125,125" backgroundStyle="Liquid" foregroundColor="228,228,228">
         <labelFormat>italic</labelFormat>
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
@@ -304,17 +338,13 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_asoaQIWBEe-kINPG_6QuPg" name="Actor" tooltipText="" outgoingEdges="_dv5-DIWBEe-kINPG_6QuPg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="capability.ecore#//Actor"/>
       <semanticElements xmi:type="ecore:EClass" href="capability.ecore#//Actor"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_asoaQYWBEe-kINPG_6QuPg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
-      </ownedStyle>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_JSH7EqOlEe-K0eKyf_GS0g" iconPath="/system.capability.edit/icons/full/obj16/Actor.gif" description="_JSH7EKOlEe-K0eKyf_GS0g" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_cLpV8IWBEe-kINPG_6QuPg" name="Entity" tooltipText="" outgoingEdges="_eJp6xoWBEe-kINPG_6QuPg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="capability.ecore#//Entity"/>
       <semanticElements xmi:type="ecore:EClass" href="capability.ecore#//Entity"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_cLpV8YWBEe-kINPG_6QuPg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
-      </ownedStyle>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_JSJJMqOlEe-K0eKyf_GS0g" iconPath="/system.capability.edit/icons/full/obj16/Entity.gif" description="_JSJJMKOlEe-K0eKyf_GS0g" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_dv5-DIWBEe-kINPG_6QuPg" sourceNode="_asoaQIWBEe-kINPG_6QuPg" targetNode="_U_3rwIWBEe-kINPG_6QuPg">
@@ -341,7 +371,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC%20ESupertypes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jVWuJoWCEe-kINPG_6QuPg" sourceNode="_M06cgIWBEe-kINPG_6QuPg" targetNode="_M06cgIWBEe-kINPG_6QuPg" beginLabel="[0..1] isIncludedIn" endLabel="[0..1] includes">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jVWuJoWCEe-kINPG_6QuPg" sourceNode="_M06cgIWBEe-kINPG_6QuPg" targetNode="_M06cgIWBEe-kINPG_6QuPg" beginLabel="[0..1] isIncludedIn" endLabel="[0..*] includes">
       <target xmi:type="ecore:EReference" href="capability.ecore#//Capability/includes"/>
       <semanticElements xmi:type="ecore:EReference" href="capability.ecore#//Capability/includes"/>
       <semanticElements xmi:type="ecore:EReference" href="capability.ecore#//Capability/isIncludedIn"/>
@@ -352,7 +382,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='Bi-directional%20EC_EReference%20']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_D1VnjIWDEe-kINPG_6QuPg" sourceNode="_M06cgIWBEe-kINPG_6QuPg" targetNode="_M06cgIWBEe-kINPG_6QuPg" beginLabel="[0..1] isExtendedBy" endLabel="[0..1] extends">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_D1VnjIWDEe-kINPG_6QuPg" sourceNode="_M06cgIWBEe-kINPG_6QuPg" targetNode="_M06cgIWBEe-kINPG_6QuPg" beginLabel="[0..1] isExtendedBy" endLabel="[0..*] extends">
       <target xmi:type="ecore:EReference" href="capability.ecore#//Capability/extends"/>
       <semanticElements xmi:type="ecore:EReference" href="capability.ecore#//Capability/extends"/>
       <semanticElements xmi:type="ecore:EReference" href="capability.ecore#//Capability/isExtendedBy"/>
@@ -366,9 +396,7 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Ww55oIWDEe-kINPG_6QuPg" name="CapabilityDiagram" tooltipText="" outgoingEdges="_RBOSpoWGEe-kINPG_6QuPg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="capability.ecore#//CapabilityDiagram"/>
       <semanticElements xmi:type="ecore:EClass" href="capability.ecore#//CapabilityDiagram"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Ww55oYWDEe-kINPG_6QuPg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
-        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
-      </ownedStyle>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_JSKXUaOlEe-K0eKyf_GS0g" iconPath="/system.capability.edit/icons/full/obj16/CapabilityDiagram.gif" description="_JSJwQaOlEe-K0eKyf_GS0g" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_RBOSpoWGEe-kINPG_6QuPg" name="[0..*] supports" sourceNode="_Ww55oIWDEe-kINPG_6QuPg" targetNode="_Oy7oYIWBEe-kINPG_6QuPg">
@@ -410,6 +438,7 @@
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
     <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Icons%20Preview']"/>
     <target xmi:type="ecore:EPackage" href="capability.ecore#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

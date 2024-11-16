@@ -149,7 +149,7 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY__IS_SPECIALIZED_BY = SPECIALIZABLE_ELEMENT__IS_SPECIALIZED_BY;
 
 	/**
-	 * The feature id for the '<em><b>Includes</b></em>' reference.
+	 * The feature id for the '<em><b>Includes</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -167,7 +167,7 @@ public interface CapabilityPackage extends EPackage {
 	int CAPABILITY__IS_INCLUDED_IN = SPECIALIZABLE_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Extends</b></em>' reference.
+	 * The feature id for the '<em><b>Extends</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -451,10 +451,10 @@ public interface CapabilityPackage extends EPackage {
 	EClass getCapability();
 
 	/**
-	 * Returns the meta object for the reference '{@link system.capability.Capability#getIncludes <em>Includes</em>}'.
+	 * Returns the meta object for the reference list '{@link system.capability.Capability#getIncludes <em>Includes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Includes</em>'.
+	 * @return the meta object for the reference list '<em>Includes</em>'.
 	 * @see system.capability.Capability#getIncludes()
 	 * @see #getCapability()
 	 * @generated
@@ -473,10 +473,10 @@ public interface CapabilityPackage extends EPackage {
 	EReference getCapability_IsIncludedIn();
 
 	/**
-	 * Returns the meta object for the reference '{@link system.capability.Capability#getExtends <em>Extends</em>}'.
+	 * Returns the meta object for the reference list '{@link system.capability.Capability#getExtends <em>Extends</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Extends</em>'.
+	 * @return the meta object for the reference list '<em>Extends</em>'.
 	 * @see system.capability.Capability#getExtends()
 	 * @see #getCapability()
 	 * @generated
@@ -644,7 +644,7 @@ public interface CapabilityPackage extends EPackage {
 		EClass CAPABILITY = eINSTANCE.getCapability();
 
 		/**
-		 * The meta object literal for the '<em><b>Includes</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Includes</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -660,7 +660,7 @@ public interface CapabilityPackage extends EPackage {
 		EReference CAPABILITY__IS_INCLUDED_IN = eINSTANCE.getCapability_IsIncludedIn();
 
 		/**
-		 * The meta object literal for the '<em><b>Extends</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Extends</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

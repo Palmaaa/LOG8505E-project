@@ -26,28 +26,18 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Capability extends SpecializableElement {
 	/**
-	 * Returns the value of the '<em><b>Includes</b></em>' reference.
+	 * Returns the value of the '<em><b>Includes</b></em>' reference list.
+	 * The list contents are of type {@link system.capability.Capability}.
 	 * It is bidirectional and its opposite is '{@link system.capability.Capability#getIsIncludedIn <em>Is Included In</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Includes</em>' reference.
-	 * @see #setIncludes(Capability)
+	 * @return the value of the '<em>Includes</em>' reference list.
 	 * @see system.capability.CapabilityPackage#getCapability_Includes()
 	 * @see system.capability.Capability#getIsIncludedIn
 	 * @model opposite="isIncludedIn"
 	 * @generated
 	 */
-	Capability getIncludes();
-
-	/**
-	 * Sets the value of the '{@link system.capability.Capability#getIncludes <em>Includes</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Includes</em>' reference.
-	 * @see #getIncludes()
-	 * @generated
-	 */
-	void setIncludes(Capability value);
+	EList<Capability> getIncludes();
 
 	/**
 	 * Returns the value of the '<em><b>Is Included In</b></em>' reference.
@@ -74,28 +64,18 @@ public interface Capability extends SpecializableElement {
 	void setIsIncludedIn(Capability value);
 
 	/**
-	 * Returns the value of the '<em><b>Extends</b></em>' reference.
+	 * Returns the value of the '<em><b>Extends</b></em>' reference list.
+	 * The list contents are of type {@link system.capability.Capability}.
 	 * It is bidirectional and its opposite is '{@link system.capability.Capability#getIsExtendedBy <em>Is Extended By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Extends</em>' reference.
-	 * @see #setExtends(Capability)
+	 * @return the value of the '<em>Extends</em>' reference list.
 	 * @see system.capability.CapabilityPackage#getCapability_Extends()
 	 * @see system.capability.Capability#getIsExtendedBy
 	 * @model opposite="isExtendedBy"
 	 * @generated
 	 */
-	Capability getExtends();
-
-	/**
-	 * Sets the value of the '{@link system.capability.Capability#getExtends <em>Extends</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Extends</em>' reference.
-	 * @see #getExtends()
-	 * @generated
-	 */
-	void setExtends(Capability value);
+	EList<Capability> getExtends();
 
 	/**
 	 * Returns the value of the '<em><b>Is Extended By</b></em>' reference.

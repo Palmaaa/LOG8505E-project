@@ -37,14 +37,14 @@ import system.capability.InvolvableElement;
  */
 public class CapabilityImpl extends SpecializableElementImpl implements Capability {
 	/**
-	 * The cached value of the '{@link #getIncludes() <em>Includes</em>}' reference.
+	 * The cached value of the '{@link #getIncludes() <em>Includes</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIncludes()
 	 * @generated
 	 * @ordered
 	 */
-	protected Capability includes;
+	protected EList<Capability> includes;
 
 	/**
 	 * The cached value of the '{@link #getIsIncludedIn() <em>Is Included In</em>}' reference.
@@ -57,14 +57,14 @@ public class CapabilityImpl extends SpecializableElementImpl implements Capabili
 	protected Capability isIncludedIn;
 
 	/**
-	 * The cached value of the '{@link #getExtends() <em>Extends</em>}' reference.
+	 * The cached value of the '{@link #getExtends() <em>Extends</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExtends()
 	 * @generated
 	 * @ordered
 	 */
-	protected Capability extends_;
+	protected EList<Capability> extends_;
 
 	/**
 	 * The cached value of the '{@link #getIsExtendedBy() <em>Is Extended By</em>}' reference.
@@ -110,67 +110,12 @@ public class CapabilityImpl extends SpecializableElementImpl implements Capabili
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Capability getIncludes() {
-		if (includes != null && includes.eIsProxy()) {
-			InternalEObject oldIncludes = (InternalEObject) includes;
-			includes = (Capability) eResolveProxy(oldIncludes);
-			if (includes != oldIncludes) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CapabilityPackage.CAPABILITY__INCLUDES,
-							oldIncludes, includes));
-			}
+	public EList<Capability> getIncludes() {
+		if (includes == null) {
+			includes = new EObjectWithInverseResolvingEList<Capability>(Capability.class, this,
+					CapabilityPackage.CAPABILITY__INCLUDES, CapabilityPackage.CAPABILITY__IS_INCLUDED_IN);
 		}
 		return includes;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Capability basicGetIncludes() {
-		return includes;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetIncludes(Capability newIncludes, NotificationChain msgs) {
-		Capability oldIncludes = includes;
-		includes = newIncludes;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					CapabilityPackage.CAPABILITY__INCLUDES, oldIncludes, newIncludes);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIncludes(Capability newIncludes) {
-		if (newIncludes != includes) {
-			NotificationChain msgs = null;
-			if (includes != null)
-				msgs = ((InternalEObject) includes).eInverseRemove(this, CapabilityPackage.CAPABILITY__IS_INCLUDED_IN,
-						Capability.class, msgs);
-			if (newIncludes != null)
-				msgs = ((InternalEObject) newIncludes).eInverseAdd(this, CapabilityPackage.CAPABILITY__IS_INCLUDED_IN,
-						Capability.class, msgs);
-			msgs = basicSetIncludes(newIncludes, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CapabilityPackage.CAPABILITY__INCLUDES, newIncludes,
-					newIncludes));
 	}
 
 	/**
@@ -246,67 +191,12 @@ public class CapabilityImpl extends SpecializableElementImpl implements Capabili
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Capability getExtends() {
-		if (extends_ != null && extends_.eIsProxy()) {
-			InternalEObject oldExtends = (InternalEObject) extends_;
-			extends_ = (Capability) eResolveProxy(oldExtends);
-			if (extends_ != oldExtends) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CapabilityPackage.CAPABILITY__EXTENDS,
-							oldExtends, extends_));
-			}
+	public EList<Capability> getExtends() {
+		if (extends_ == null) {
+			extends_ = new EObjectWithInverseResolvingEList<Capability>(Capability.class, this,
+					CapabilityPackage.CAPABILITY__EXTENDS, CapabilityPackage.CAPABILITY__IS_EXTENDED_BY);
 		}
 		return extends_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Capability basicGetExtends() {
-		return extends_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExtends(Capability newExtends, NotificationChain msgs) {
-		Capability oldExtends = extends_;
-		extends_ = newExtends;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					CapabilityPackage.CAPABILITY__EXTENDS, oldExtends, newExtends);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExtends(Capability newExtends) {
-		if (newExtends != extends_) {
-			NotificationChain msgs = null;
-			if (extends_ != null)
-				msgs = ((InternalEObject) extends_).eInverseRemove(this, CapabilityPackage.CAPABILITY__IS_EXTENDED_BY,
-						Capability.class, msgs);
-			if (newExtends != null)
-				msgs = ((InternalEObject) newExtends).eInverseAdd(this, CapabilityPackage.CAPABILITY__IS_EXTENDED_BY,
-						Capability.class, msgs);
-			msgs = basicSetExtends(newExtends, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CapabilityPackage.CAPABILITY__EXTENDS, newExtends,
-					newExtends));
 	}
 
 	/**
@@ -400,20 +290,14 @@ public class CapabilityImpl extends SpecializableElementImpl implements Capabili
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case CapabilityPackage.CAPABILITY__INCLUDES:
-			if (includes != null)
-				msgs = ((InternalEObject) includes).eInverseRemove(this, CapabilityPackage.CAPABILITY__IS_INCLUDED_IN,
-						Capability.class, msgs);
-			return basicSetIncludes((Capability) otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getIncludes()).basicAdd(otherEnd, msgs);
 		case CapabilityPackage.CAPABILITY__IS_INCLUDED_IN:
 			if (isIncludedIn != null)
 				msgs = ((InternalEObject) isIncludedIn).eInverseRemove(this, CapabilityPackage.CAPABILITY__INCLUDES,
 						Capability.class, msgs);
 			return basicSetIsIncludedIn((Capability) otherEnd, msgs);
 		case CapabilityPackage.CAPABILITY__EXTENDS:
-			if (extends_ != null)
-				msgs = ((InternalEObject) extends_).eInverseRemove(this, CapabilityPackage.CAPABILITY__IS_EXTENDED_BY,
-						Capability.class, msgs);
-			return basicSetExtends((Capability) otherEnd, msgs);
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getExtends()).basicAdd(otherEnd, msgs);
 		case CapabilityPackage.CAPABILITY__IS_EXTENDED_BY:
 			if (isExtendedBy != null)
 				msgs = ((InternalEObject) isExtendedBy).eInverseRemove(this, CapabilityPackage.CAPABILITY__EXTENDS,
@@ -434,11 +318,11 @@ public class CapabilityImpl extends SpecializableElementImpl implements Capabili
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case CapabilityPackage.CAPABILITY__INCLUDES:
-			return basicSetIncludes(null, msgs);
+			return ((InternalEList<?>) getIncludes()).basicRemove(otherEnd, msgs);
 		case CapabilityPackage.CAPABILITY__IS_INCLUDED_IN:
 			return basicSetIsIncludedIn(null, msgs);
 		case CapabilityPackage.CAPABILITY__EXTENDS:
-			return basicSetExtends(null, msgs);
+			return ((InternalEList<?>) getExtends()).basicRemove(otherEnd, msgs);
 		case CapabilityPackage.CAPABILITY__IS_EXTENDED_BY:
 			return basicSetIsExtendedBy(null, msgs);
 		case CapabilityPackage.CAPABILITY__INVOLVES:
@@ -456,17 +340,13 @@ public class CapabilityImpl extends SpecializableElementImpl implements Capabili
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case CapabilityPackage.CAPABILITY__INCLUDES:
-			if (resolve)
-				return getIncludes();
-			return basicGetIncludes();
+			return getIncludes();
 		case CapabilityPackage.CAPABILITY__IS_INCLUDED_IN:
 			if (resolve)
 				return getIsIncludedIn();
 			return basicGetIsIncludedIn();
 		case CapabilityPackage.CAPABILITY__EXTENDS:
-			if (resolve)
-				return getExtends();
-			return basicGetExtends();
+			return getExtends();
 		case CapabilityPackage.CAPABILITY__IS_EXTENDED_BY:
 			if (resolve)
 				return getIsExtendedBy();
@@ -487,13 +367,15 @@ public class CapabilityImpl extends SpecializableElementImpl implements Capabili
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case CapabilityPackage.CAPABILITY__INCLUDES:
-			setIncludes((Capability) newValue);
+			getIncludes().clear();
+			getIncludes().addAll((Collection<? extends Capability>) newValue);
 			return;
 		case CapabilityPackage.CAPABILITY__IS_INCLUDED_IN:
 			setIsIncludedIn((Capability) newValue);
 			return;
 		case CapabilityPackage.CAPABILITY__EXTENDS:
-			setExtends((Capability) newValue);
+			getExtends().clear();
+			getExtends().addAll((Collection<? extends Capability>) newValue);
 			return;
 		case CapabilityPackage.CAPABILITY__IS_EXTENDED_BY:
 			setIsExtendedBy((Capability) newValue);
@@ -515,13 +397,13 @@ public class CapabilityImpl extends SpecializableElementImpl implements Capabili
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case CapabilityPackage.CAPABILITY__INCLUDES:
-			setIncludes((Capability) null);
+			getIncludes().clear();
 			return;
 		case CapabilityPackage.CAPABILITY__IS_INCLUDED_IN:
 			setIsIncludedIn((Capability) null);
 			return;
 		case CapabilityPackage.CAPABILITY__EXTENDS:
-			setExtends((Capability) null);
+			getExtends().clear();
 			return;
 		case CapabilityPackage.CAPABILITY__IS_EXTENDED_BY:
 			setIsExtendedBy((Capability) null);
@@ -542,11 +424,11 @@ public class CapabilityImpl extends SpecializableElementImpl implements Capabili
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case CapabilityPackage.CAPABILITY__INCLUDES:
-			return includes != null;
+			return includes != null && !includes.isEmpty();
 		case CapabilityPackage.CAPABILITY__IS_INCLUDED_IN:
 			return isIncludedIn != null;
 		case CapabilityPackage.CAPABILITY__EXTENDS:
-			return extends_ != null;
+			return extends_ != null && !extends_.isEmpty();
 		case CapabilityPackage.CAPABILITY__IS_EXTENDED_BY:
 			return isExtendedBy != null;
 		case CapabilityPackage.CAPABILITY__INVOLVES:
