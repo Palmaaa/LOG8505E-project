@@ -97,7 +97,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Relations">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateSpecializedRelation" label="Specializes" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='SpecializableElementRelation']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateSpecializedRelation" label="Specializes" precondition="aql:preTarget.eClass() = preSource.eClass()" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='SpecializableElementRelation']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
