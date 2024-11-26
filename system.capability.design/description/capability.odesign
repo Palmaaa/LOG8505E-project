@@ -108,7 +108,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateIncludesRelation" label="Includes" precondition="aql:preTarget.differs(preSource)" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='CapabilityIncludesRelation']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateIncludesRelation" label="Includes" precondition="aql:preTarget.differs(preSource) and preSource.isIncludedIn->forAll(o | o.isIncludedIn->excludes(preTarget))" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='CapabilityIncludesRelation']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -119,7 +119,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateExtendsRelation" label="Extends" precondition="aql:preTarget.differs(preSource)" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='CapabilityExtendsRelation']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateExtendsRelation" label="Extends" precondition="aql:preTarget.differs(preSource) and preSource.isExtendedBy->forAll(o | o.isExtendedBy->excludes(preTarget))" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='CapabilityExtendsRelation']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
