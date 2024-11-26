@@ -1,8 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="capability" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="capability" version="12.0.0.2017041100">
   <ownedViewpoints name="capabilities" modelFileExtension="">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="System Capability" domainClass="capability::CapabilityDiagram" enablePopupBars="true">
       <metamodel href="http://www.example.org/capability#/"/>
+      <validationSet>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="ActorSpecialization" label="Actor Specialization" level="ERROR" message="An Actor must only specialize another Actor" targetClass="capability::Actor">
+          <audits auditExpression="aql:self.specializes = null or self.specializes.oclIsTypeOf(capability::Actor)"/>
+          <fixes name="Remove wrong specialization">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Unset" featureName="specializes"/>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="EntitySpecialization" label="Entity Specialization" level="ERROR" message="An Entity must only specialize another Entity" targetClass="capability::Entity">
+          <audits auditExpression="aql:self.specializes = null or self.specializes.oclIsTypeOf(capability::Entity)"/>
+          <fixes name="Remove wrong Entity specialization">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Unset" featureName="specializes"/>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="CapabilitySpecialization" label="Capability Specialization" level="ERROR" message="An Capability must only specialize another Capability" targetClass="capability::Capability">
+          <audits auditExpression="aql:self.specializes = null or self.specializes.oclIsTypeOf(capability::Capability)"/>
+          <fixes name="Remove wrong Capability specialization">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Unset" featureName="specializes"/>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="CapabilityIncludes" label="Irreflexive Capability Includes" level="ERROR" message="An Capability cannot include itself" targetClass="capability::Capability">
+          <audits auditExpression="aql:self.includes->excludes(self)"/>
+          <fixes name="Remove wrong Capability include">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Unset" featureName="isIncludedIn"/>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="CapabilityExtends" label="Irreflexive Capability Extends" level="ERROR" message="An Capability cannot extend itself" targetClass="capability::Capability">
+          <audits auditExpression="aql:self.extends->excludes(self)"/>
+          <fixes name="Remove wrong Capability extend">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Unset" featureName="isExtendedBy"/>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="CapabilityCyclicExtends" label="Asymetric Capability Extends" level="ERROR" message="An Capability cannot extend other Capability symetrically" targetClass="capability::Capability">
+          <audits auditExpression="aql:self.extends->forAll(o | o.extends->excludes(self))"/>
+          <fixes name="Remove symetric Capability extend">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Unset" featureName="isExtendedBy"/>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="CapabilityAsymetricIncludes" label="Asymetric Capability Includes" level="ERROR" message="An Capability cannot include other Capability symetrically" targetClass="capability::Capability">
+          <audits auditExpression="aql:self.includes->forAll(o | o.includes->excludes(self))"/>
+          <fixes name="Remove symetric Capability include">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:Unset" featureName="isIncludedIn"/>
+            </initialOperation>
+          </fixes>
+        </ownedRules>
+      </validationSet>
       <defaultLayer name="Default">
         <nodeMappings name="Capability" labelDirectEdit="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:supports" domainClass="capability::Capability">
           <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/system.capability.design/icons/capability.png">
@@ -56,128 +114,128 @@
           </style>
         </edgeMappings>
         <toolSections name="Tools">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateActor" label="Actor" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Actor']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="CreateActor" label="Actor" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Actor']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="capability::Actor" referenceName="supports">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Actor '+container.supports->filter(capability::Actor)->size()"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="capability::Actor" referenceName="supports">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'Actor '+container.supports->filter(capability::Actor)->size()"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateEntity" label="Entity" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Entity']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="CreateEntity" label="Entity" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Entity']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="capability::Entity" referenceName="supports">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Entity '+container.supports->filter(capability::Entity)->size()"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="capability::Entity" referenceName="supports">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'Entity '+container.supports->filter(capability::Entity)->size()"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="CreateCapability" label="Capability" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Capability']">
+          <ownedTools xsi:type="tool_1:NodeCreationDescription" name="CreateCapability" label="Capability" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@nodeMappings[name='Capability']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="capability::Capability" referenceName="supports">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'C'+container.supports->filter(capability::Capability)->size()"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="capability::Capability" referenceName="supports">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="aql:'C'+container.supports->filter(capability::Capability)->size()"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DirectEditLabel" name="editName" label="Edit Name">
+          <ownedTools xsi:type="tool_1:DirectEditLabel" name="editName" label="Edit Name">
             <mask mask="{0}"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+              <firstModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="var:0"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
         <toolSections name="Relations">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateSpecializedRelation" label="Specializes" precondition="aql:preTarget.eClass() = preSource.eClass()" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='SpecializableElementRelation']">
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="CreateSpecializedRelation" label="Specializes" precondition="aql:preTarget.eClass() = preSource.eClass()" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='SpecializableElementRelation']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="specializes" valueExpression="var:target"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool:SetValue" featureName="specializes" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateIncludesRelation" label="Includes" precondition="aql:preTarget.differs(preSource) and preSource.isIncludedIn->forAll(o | o.isIncludedIn->excludes(preTarget))" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='CapabilityIncludesRelation']">
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="CreateIncludesRelation" label="Includes" precondition="aql:preTarget.differs(preSource) and preTarget.includes->excludes(preSource)" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='CapabilityIncludesRelation']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="includes" valueExpression="var:target"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool:SetValue" featureName="includes" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateExtendsRelation" label="Extends" precondition="aql:preTarget.differs(preSource) and preSource.isExtendedBy->forAll(o | o.isExtendedBy->excludes(preTarget))" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='CapabilityExtendsRelation']">
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="CreateExtendsRelation" label="Extends" precondition="aql:preTarget.differs(preSource) and preTarget.extends->excludes(preSource)" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='CapabilityExtendsRelation']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="extends" valueExpression="var:target"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool:SetValue" featureName="extends" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CreateInvolvableRelation" label="Involves" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='ActorEntityCapabilityRelation']">
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="CreateInvolvableRelation" label="Involves" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='capabilities']/@ownedRepresentations[name='System%20Capability']/@defaultLayer/@edgeMappings[name='ActorEntityCapabilityRelation']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="involves" valueExpression="var:target"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool:SetValue" featureName="involves" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteSpecializes" forceRefresh="true">
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DeleteSpecializes" forceRefresh="true">
             <element name="element"/>
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="specializes"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:Unset" featureName="specializes"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteInvolves" forceRefresh="true">
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DeleteInvolves" forceRefresh="true">
             <element name="element"/>
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="involves" elementExpression="aql:elementView.targetNode.target"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:Unset" featureName="involves" elementExpression="aql:elementView.targetNode.target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteExtends" forceRefresh="true">
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DeleteExtends" forceRefresh="true">
             <element name="element"/>
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="extends" elementExpression="aql:elementView.targetNode.target"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:Unset" featureName="extends" elementExpression="aql:elementView.targetNode.target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:DeleteElementDescription" name="DeleteIncludes" forceRefresh="true">
+          <ownedTools xsi:type="tool_1:DeleteElementDescription" name="DeleteIncludes" forceRefresh="true">
             <element name="element"/>
             <elementView name="elementView"/>
             <containerView name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="includes" elementExpression="aql:elementView.targetNode.target"/>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool:Unset" featureName="includes" elementExpression="aql:elementView.targetNode.target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
