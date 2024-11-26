@@ -9,7 +9,7 @@
 - **Collaboration**: @melaasar from NASA Jet Propulsion Laboratory 🚀
 - **Team Members**:
   - Gustavo Palma dos Santos
-  - Arthur
+  - Arthur Milani Giovanini
 
 
 ## 🛠️ How to Install
