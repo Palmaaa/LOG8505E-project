@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/system.capability.feature_1.0.0.202411270000.jar" id="system.capability.feature" version="1.0.0.202411270000">
+      <category name="SystemCapabilityDiagram"/>
+   </feature>
+   <category-def name="SystemCapabilityDiagram" label="System Capability Diagram"/>
+</site>
