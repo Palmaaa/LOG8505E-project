@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capability:CapabilityDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:capability="http://www.example.org/capability">
+  <supports xsi:type="capability:Actor" name="Computer Engineer" isInvolvedIn="//@supports.2"/>
+  <supports xsi:type="capability:Actor" name="Student" isInvolvedIn="//@supports.3"/>
+  <supports xsi:type="capability:Capability" name="C2" specializes="//@supports.4" includes="//@supports.5" isExtendedBy="//@supports.3" involves="//@supports.6 //@supports.0"/>
+  <supports xsi:type="capability:Capability" name="C1" extends="//@supports.2" involves="//@supports.7 //@supports.1"/>
+  <supports xsi:type="capability:Capability" name="C3" isSpecializedBy="//@supports.2"/>
+  <supports xsi:type="capability:Capability" name="C4" isIncludedIn="//@supports.2"/>
+  <supports xsi:type="capability:Entity" name="Entity 1" isInvolvedIn="//@supports.2"/>
+  <supports xsi:type="capability:Entity" name="Entity 2" isInvolvedIn="//@supports.3"/>
+</capability:CapabilityDiagram>

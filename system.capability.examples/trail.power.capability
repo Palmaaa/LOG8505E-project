@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capability:CapabilityDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:capability="http://www.example.org/capability">
+  <supports xsi:type="capability:Actor" name="User" isInvolvedIn="//@supports.2 //@supports.3 //@supports.4"/>
+  <supports xsi:type="capability:Actor" name="Developer" isInvolvedIn="//@supports.9"/>
+  <supports xsi:type="capability:Capability" name="Provide 24 hour visibility" involves="//@supports.0"/>
+  <supports xsi:type="capability:Capability" name="Connect to USB device cable" involves="//@supports.0 //@supports.5"/>
+  <supports xsi:type="capability:Capability" name="Disconnect USB device cable" involves="//@supports.0 //@supports.5"/>
+  <supports xsi:type="capability:Entity" name="USB device" isInvolvedIn="//@supports.3 //@supports.4 //@supports.6"/>
+  <supports xsi:type="capability:Capability" name="Charge USB device" includes="//@supports.7" involves="//@supports.5"/>
+  <supports xsi:type="capability:Capability" name="Generate Power" isIncludedIn="//@supports.6" involves="//@supports.8"/>
+  <supports xsi:type="capability:Entity" name="Sun" isInvolvedIn="//@supports.7"/>
+  <supports xsi:type="capability:Capability" name="Monitor operation remotely" involves="//@supports.1"/>
+</capability:CapabilityDiagram>
