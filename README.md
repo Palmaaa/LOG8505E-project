@@ -15,7 +15,7 @@
 ## 🛠️ How to Install
 
 1. [Download](https://www.obeodesigner.com/en/download) Sirius Obeo Designer
-2. Download the project's .zip package
+2. [Download](https://github.com/Palmaaa/LOG8505E-project/releases/tag/v1.0.0) the project's .zip package
 3. Install the package as a plugin:
    - Open Sirius Obeo Designer
    - Go to: Help > Install New Software... > Add > Archive
