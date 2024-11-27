@@ -48,4 +48,4 @@ The project includes the following graphical tooling:
 # 📄 Documentation
 
 - [Project Report]() (WIP)
-- [Final Presentation]() (WIP)
+- [Final Presentation](https://github.com/Palmaaa/LOG8505E-project/blob/master/media/Presentation_Gustavo_Arthur.pdf)
