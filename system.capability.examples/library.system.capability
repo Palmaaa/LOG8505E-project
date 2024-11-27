@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capability:CapabilityDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:capability="http://www.example.org/capability">
+  <supports xsi:type="capability:Actor" name="Librarian" isInvolvedIn="//@supports.2"/>
+  <supports xsi:type="capability:Actor" name="Customer" isInvolvedIn="//@supports.5"/>
+  <supports xsi:type="capability:Capability" name="Manage reservation" extends="//@supports.5" involves="//@supports.0 //@supports.3"/>
+  <supports xsi:type="capability:Entity" name="Management System" isInvolvedIn="//@supports.2"/>
+  <supports xsi:type="capability:Entity" name="Database" isInvolvedIn="//@supports.6"/>
+  <supports xsi:type="capability:Capability" name="Reserve book" includes="//@supports.6" isExtendedBy="//@supports.2" involves="//@supports.1"/>
+  <supports xsi:type="capability:Capability" name="Check availability" isIncludedIn="//@supports.5" involves="//@supports.4"/>
+</capability:CapabilityDiagram>
