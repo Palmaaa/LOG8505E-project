@@ -6,10 +6,10 @@
 
 - **Course**: LOG8505 - Model Driven Software Engineering
 - **Instructor**: Hyacinth Ali
-- **Collaboration**: @melaasar from NASA Jet Propulsion Laboratory 🚀
+- **Collaboration**: [@melaasar](https://github.com/melaasar) from NASA Jet Propulsion Laboratory 🚀
 - **Team Members**:
-  - Gustavo Palma dos Santos
-  - Arthur Milani Giovanini
+  - Gustavo Palma dos Santos [@Palmaaa](https://github.com/Palmaaa)
+  - Arthur Milani Giovanini [@ArthurMilani](https://github.com/ArthurMilani)
 
 
 ## 🛠️ How to Install
