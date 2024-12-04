@@ -47,5 +47,5 @@ The project includes the following graphical tooling:
 
 # 📄 Documentation
 
-- [Project Report]() (WIP)
+- [Project Report](https://github.com/Palmaaa/LOG8505E-project/blob/master/media/Final_Report_Gustavo_Arthur.pdf)
 - [Final Presentation](https://github.com/Palmaaa/LOG8505E-project/blob/master/media/Presentation_Gustavo_Arthur.pdf)
