@@ -6,10 +6,10 @@
 
 - **Course**: LOG8505 - Model Driven Software Engineering
 - **Instructor**: Hyacinth Ali
-- **Collaboration**: @melaasar from NASA Jet Propulsion Laboratory 🚀
+- **Collaboration**: [@melaasar](https://github.com/melaasar) from NASA Jet Propulsion Laboratory 🚀
 - **Team Members**:
-  - Gustavo Palma dos Santos
-  - Arthur Milani Giovanini
+  - Gustavo Palma dos Santos [@Palmaaa](https://github.com/Palmaaa)
+  - Arthur Milani Giovanini [@ArthurMilani](https://github.com/ArthurMilani)
 
 
 ## 🛠️ How to Install
@@ -48,4 +48,4 @@ The project includes the following graphical tooling:
 # 📄 Documentation
 
 - [Project Report]() (WIP)
-- [Final Presentation]() (WIP)
+- [Final Presentation](https://github.com/Palmaaa/LOG8505E-project/blob/master/media/Presentation_Gustavo_Arthur.pdf)
